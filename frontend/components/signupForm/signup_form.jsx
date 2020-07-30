@@ -1,5 +1,6 @@
 import React from 'react';
-import { validateEmail } from '../../util/validate_util'
+import { validateEmail } from '../../util/validate_util';
+import { Link } from 'react-router-dom';
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -13,6 +14,11 @@ class SignupForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
   }
+
+  componentDidMount(){
+    this.props.clearErrors(this.state.errors);
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
@@ -45,7 +51,7 @@ class SignupForm extends React.Component {
               onChange={this.update('username')}
               placeholder={'Username'}
             />
-            <div>{this.props.errors['username'] ? this.props.errors['username'] : ''}</div>
+            <div className="error-text">{this.props.errors['username'] ? this.props.errors['username'] : ''}</div>
           </div>
           <br/>
           <div>
@@ -55,7 +61,7 @@ class SignupForm extends React.Component {
               onChange={this.update('password')}
               placeholder={'Password'}
             />
-            <div>{this.props.errors['password'] ? this.props.errors['password'] : ''}</div>
+            <div className="error-text">{this.props.errors['password'] ? this.props.errors['password'] : ''}</div>
           </div>
           <br/>
           <div>
@@ -65,12 +71,16 @@ class SignupForm extends React.Component {
               onChange={this.update('email')}
               placeholder={'Email'}
             />
-            <div>{this.state.errors ? this.state.errors[0] : ''}</div>
+            <div className="error-text">{this.state.errors ? this.state.errors[0] : ''}</div>
           </div>
-          <br/>
-          <input className='submit-button' type="submit" value={this.props.formType} />
-          <p className='or'> or </p>
-          <button className='demo-login' onClick={this.handleDemoSubmit}>Demo Signin</button>
+          <div className="form-buttons">
+            <input className='submit-button' type="submit" value={this.props.formType} />
+            <p className='or'> or </p>
+            <button className='demo-login' onClick={this.handleDemoSubmit}>Demo Signin</button>
+          </div>
+          <div className="account-link">
+            <p>Already have an account? <Link className='link' to='/login'>Sign In!</Link></p>
+          </div>
         </form>
       </div>
     );

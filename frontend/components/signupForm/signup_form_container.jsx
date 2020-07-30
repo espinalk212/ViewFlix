@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { signup, demoUser } from '../../actions/session_actions';
+import { signup, demoUser, clearErrors } from '../../actions/session_actions';
 import SignupForm from '../signupForm/signup_form';
-import { closeModal } from '../../actions/modal_actions';
 
 
 const msp = state => ({
@@ -12,7 +11,7 @@ const msp = state => ({
 
 const mdp = dispatch => ({
   processForm: user => dispatch(signup(user)),
-  closeModal: () => dispatch(closeModal()),
+  clearErrors: errors => dispatch(clearErrors(errors)),
   demoUser: () => dispatch(demoUser()),
 });
 

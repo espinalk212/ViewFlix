@@ -1,0 +1,26 @@
+.splash-signup-container {
+  display: block;
+  text-align: center;
+  padding-top: 20%;
+  padding-bottom: 30%;
+}
+
+.splash-signup {
+  display: inline-flexbox;
+  font-size: 55px;
+  color: white;
+
+}
+
+.splash-signup-button {
+
+  background-color: red;
+  border-radius: 2px;
+  color: white;
+  padding: 10px;
+  font-size: 30px;
+  width: 50%;
+  box-shadow: none;
+  border-color: transparent;
+  cursor: pointer;
+}

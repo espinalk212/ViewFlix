@@ -11,9 +11,17 @@
   color: white;
   padding: 5px;
   font-size: 20px;
-  width: 100%;
+  width: 99%;
   box-shadow: none;
   border-color: transparent;
+}
+
+.demo-login:hover {
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  cursor: pointer;
 }
 
 
@@ -22,12 +30,12 @@
   background: #000000BF;
   top: 50%;
   left: 50%;
-  width: 27%;
+  width: 30%;
   height: 500px;
   border-radius: 4px;
   padding: 40px;
   background-blend-mode: normal;
-  color: rgb(255, 255, 255);
+  color: white;
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
@@ -47,7 +55,7 @@
   color: white;
   padding: 5px;
   font-size: 16px;
-  width: 374.8px;
+  width: 94%;
   height: 23px;
   border-color: transparent;
 }
@@ -56,3 +64,32 @@
   text-align: center;
   padding: 5px;
 }
+
+.error-text {
+  color: orange;
+  font-size: 12px;
+  padding-bottom: 2px;
+}
+
+.form-buttons {
+  padding-top: 35px;
+}
+
+.account-link {
+  padding-top: 15px;
+
+}
+
+.link {
+  color: white;
+}
+
+.link:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.link:visited {
+  color: gray;
+}
+

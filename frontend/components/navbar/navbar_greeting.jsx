@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import SignupFormContainer from '../signupForm/signup_form_container';
+import { Link, Route, withRouter } from 'react-router-dom';
+
 
 class NavbarGreeting extends React.Component {
   constructor(props) {
     super(props)
   }
-
 
   
   render() {
@@ -23,11 +22,14 @@ class NavbarGreeting extends React.Component {
       );
     } else {
       return(
-        <div className='navbar'>
-          <Link to="/"><img className='logo' src={window.logo} /></Link>
-          <div className="right-nav">
-            <Link to='/login'><button className='nav-button'>Sign In</button></Link>
-            <Link to='/signup'><button className='nav-button'>Sign Up!</button></Link>
+        <div>
+          <div className='navbar'>
+            <Link to="/"><img className='logo' src={window.logo} /></Link>
+            <div className="right-nav">
+              {this.props.renderButton ? 
+              <Link to='/login'><button className='nav-button'>Sign In</button></Link> : null
+            }
+            </div>
           </div>
         </div>
           );
