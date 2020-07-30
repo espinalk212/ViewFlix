@@ -1,0 +1,58 @@
+.form-heading {
+  font-size: 32px;
+  height: 10%;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.submit-button, .demo-login {
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  font-size: 20px;
+  width: 100%;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+
+.session-form {
+  background-color: transparent;
+  background: #000000BF;
+  top: 50%;
+  left: 50%;
+  width: 27%;
+  height: 500px;
+  border-radius: 4px;
+  padding: 40px;
+  background-blend-mode: normal;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+
+
+.session-form-container {
+  display: block;
+  text-align: center;
+}
+
+.input-field {
+  background-color: #454545;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  font-size: 16px;
+  width: 374.8px;
+  height: 23px;
+  border-color: transparent;
+}
+
+.or {
+  text-align: center;
+  padding: 5px;
+}
