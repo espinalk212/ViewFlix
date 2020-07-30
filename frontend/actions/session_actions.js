@@ -46,6 +46,5 @@ export const logout = () => dispatch => (
 export const demoUser = () => dispatch => (
   APIUTIL.demoUserLogin()
     .then(user => dispatch(receiveCurrentUser(user)))
-    .then(modal => dispatch(closeModal(modal)))
 
 );

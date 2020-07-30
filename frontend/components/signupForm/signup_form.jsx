@@ -1,4 +1,5 @@
 import React from 'react';
+import { validateEmail } from '../../util/validate_util'
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -6,7 +7,8 @@ class SignupForm extends React.Component {
     this.state = {
       username: "",
       password: "",
-      email: ""
+      email: "", 
+      errors: null
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
@@ -14,12 +16,16 @@ class SignupForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user).then(this.props.closeModal);
+    if (validateEmail(this.state.email)) { 
+      return this.props.processForm(user) 
+    } else {
+      this.setState({ errors: ["Invalid Email"] });
+    }
   }
 
   handleDemoSubmit(e) {
     e.preventDefault();
-    this.props.demoUser({ username: 'andy', password: '123456' })
+    this.props.demoUser();
   }
 
   update(field) {
@@ -37,8 +43,9 @@ class SignupForm extends React.Component {
               type="text"
               value={this.state.username}
               onChange={this.update('username')}
-              placeholder={this.props.errors['username'] ? this.props.errors['username'] : 'Username'}
+              placeholder={'Username'}
             />
+            <div>{this.props.errors['username'] ? this.props.errors['username'] : ''}</div>
           </div>
           <br/>
           <div>
@@ -46,8 +53,9 @@ class SignupForm extends React.Component {
               type="password"
               value={this.state.password}
               onChange={this.update('password')}
-              placeholder={this.props.errors['password'] ? this.props.errors['password'] : 'Password'}
+              placeholder={'Password'}
             />
+            <div>{this.props.errors['password'] ? this.props.errors['password'] : ''}</div>
           </div>
           <br/>
           <div>
@@ -55,8 +63,9 @@ class SignupForm extends React.Component {
               type="text"
               value={this.state.email}
               onChange={this.update('email')}
-              placeholder={this.props.errors['email'] ? this.props.errors['email'] : 'Email'}
+              placeholder={'Email'}
             />
+            <div>{this.state.errors ? this.state.errors[0] : ''}</div>
           </div>
           <br/>
           <input className='submit-button' type="submit" value={this.props.formType} />
