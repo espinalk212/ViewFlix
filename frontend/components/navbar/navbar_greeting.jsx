@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, Route, withRouter } from 'react-router-dom';
 
 
 class NavbarGreeting extends React.Component {
   constructor(props) {
     super(props)
+  }
+
+  NavItem(props) {
+    const { icon } = props
+    const [ open, setOpen ] = useState(false);
+    return(
+        <div className="profile-dropdown dropdown">
+          <i className={`${icon} foobar`} onClick={() => setOpen(!open)}>
+            {
+              open && props.children
+            }
+          </i>
+        </div>
+    );
   }
 
   
@@ -14,9 +28,42 @@ class NavbarGreeting extends React.Component {
       return(
         <div className='navbar'>
           <Link to="/"><img className='logo' src={window.logo} /></Link>
+              < this.NavItem icon={'fas fa-clipboard-list'} >
+                <ul>
+                  <Link><li>Kevin</li></Link>
+                  <Link><li>Kevin</li></Link>
+                  <Link><li>Sign Out</li></Link>
+                </ul>
+              </this.NavItem>
           <div className='right-nav'>
-            <h3 className='greeting'>Welcome {currentUser.username}!</h3>
-            <button className='nav-button' value="logout" onClick={logout} >Log Out!</button>
+            <this.NavItem icon={'fas fa-search'} >
+              <ul>
+                <Link><li>Kevin</li></Link>
+                <Link><li>Kevin</li></Link>
+                <Link><li>Sign Out</li></Link>
+                </ul>
+              </this.NavItem>
+            <this.NavItem icon={'fab fa-github'} >
+                  <ul>
+                    <Link><li>Kevin</li></Link>
+                    <Link><li>Kevin</li></Link>
+                    <Link><li>Sign Out</li></Link>
+                  </ul>
+            </this.NavItem>
+            < this.NavItem icon={'fas fa-bell'} >
+                  <ul>
+                    <Link><li>Kevin</li></Link>
+                    <Link><li>Kevin</li></Link>
+                    <Link><li>Sign Out</li></Link>
+                  </ul>
+            </this.NavItem>
+            <this.NavItem icon={'fas fa-user-circle'} >
+              <ul>
+                <Link><li>Kevin</li></Link>
+                <Link><li>Kevin</li></Link>
+                <button className='nav-button' value="logout" onClick={logout} >Log Out!</button>
+              </ul>
+            </this.NavItem>
           </div>
         </div>
       );

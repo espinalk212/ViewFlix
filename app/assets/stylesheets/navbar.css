@@ -28,16 +28,34 @@
   float: left;
 }
 
-.nav-button {
-  background-color: red;
-  border-radius: 5px;
-  color: white;
-  padding: 7px 17px;
-  font-size: 16px;
-  width: 100px;
-  height: 40px;
-  margin: 8px;
-  box-shadow: none;
-  border-color: transparent;
+
+.foobar {
+  position: relative;
+  font-size: 27px;
+  padding-right: 20px;
+}
+
+.foobar > ul {
+  /* display: none; */
+  list-style: none;
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  width: 600%;
+  background-color: #000000BF;
+  font-size: 20px;
+  border: 2px solid cornflowerblue;
+}
+
+
+.foobar > ul > li {
+  padding: 5%;
+
+}
+
+.foobar:hover {
+  display: block;
   cursor: pointer;
 }
+
+

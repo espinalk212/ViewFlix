@@ -1,17 +1,17 @@
 class Api::VideosController < ApplicationController
-  def create
-  end
-
   def index
+    @videos = Video.all
+    render :index
   end
 
-  def destroy
+
+  def show
+    @video = Video.find(params[:id])
+    render :show
   end
 
-  def edit
-  end
-
-  def update
-  end
-
+  # private 
+  # def video_params 
+  #   params.require(:video).permit(:id)
+  # end
 end

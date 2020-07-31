@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { signup, demoUser, clearErrors } from '../../actions/session_actions';
-import SignupForm from '../signupForm/signup_form';
+import SignupForm from './signup_form';
 
 
 const msp = state => ({
