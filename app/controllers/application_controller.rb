@@ -6,7 +6,9 @@ class ApplicationController < ActionController::Base
   end
 
   def ensure_logged_in
-    redirect_to api_session_url
+    unless current_user
+      render json: { base: ['invalid credentials'] }, status: 401
+    end
   end
 
   def logout!

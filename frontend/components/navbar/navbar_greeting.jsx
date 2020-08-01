@@ -1,25 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, Route, withRouter } from 'react-router-dom';
-
 
 class NavbarGreeting extends React.Component {
   constructor(props) {
     super(props)
-  }
+    }
 
-  NavItem(props) {
-    const { icon } = props
-    const [ open, setOpen ] = useState(false);
-    return(
-        <div className="profile-dropdown dropdown">
-          <i className={`${icon} foobar`} onClick={() => setOpen(!open)}>
-            {
-              open && props.children
-            }
-          </i>
-        </div>
-    );
-  }
+
+
 
   
   render() {
@@ -27,43 +15,49 @@ class NavbarGreeting extends React.Component {
     if (currentUser) {
       return(
         <div className='navbar'>
-          <Link to="/"><img className='logo' src={window.logo} /></Link>
-              < this.NavItem icon={'fas fa-clipboard-list'} >
-                <ul>
-                  <Link><li>Kevin</li></Link>
-                  <Link><li>Kevin</li></Link>
-                  <Link><li>Sign Out</li></Link>
-                </ul>
-              </this.NavItem>
-          <div className='right-nav'>
-            <this.NavItem icon={'fas fa-search'} >
-              <ul>
-                <Link><li>Kevin</li></Link>
-                <Link><li>Kevin</li></Link>
-                <Link><li>Sign Out</li></Link>
-                </ul>
-              </this.NavItem>
-            <this.NavItem icon={'fab fa-github'} >
-                  <ul>
-                    <Link><li>Kevin</li></Link>
-                    <Link><li>Kevin</li></Link>
-                    <Link><li>Sign Out</li></Link>
-                  </ul>
-            </this.NavItem>
-            < this.NavItem icon={'fas fa-bell'} >
-                  <ul>
-                    <Link><li>Kevin</li></Link>
-                    <Link><li>Kevin</li></Link>
-                    <Link><li>Sign Out</li></Link>
-                  </ul>
-            </this.NavItem>
-            <this.NavItem icon={'fas fa-user-circle'} >
-              <ul>
-                <Link><li>Kevin</li></Link>
-                <Link><li>Kevin</li></Link>
-                <button className='nav-button' value="logout" onClick={logout} >Log Out!</button>
+          
+          <div className='left-nav'> 
+            <Link to="/home"><img className='logo' src={window.logo} /></Link>
+            <i className="fas fa-clipboard-list foobar">
+              <ul className='dropdown-menu'>
+                <li>Playlist 1</li>
+                <li>Playlist 2</li>
               </ul>
-            </this.NavItem>
+            </i>
+          </div>
+
+            <div className='right-nav'>
+              <i className="fas fa-search foobar" >
+                <ul className="">
+
+              {/* insert search box here */}
+                </ul>
+              </i>
+
+              <i className="fab fa-github foobar">
+                <ul className="dropdown-menu">
+                  <a className="link" href="https://github.com/espinalk212"><li>Github</li></a>
+                  <a className="link" href="https://www.linkedin.com/in/kevin-espinal-11238819a/"><li>LinkedIn</li></a>
+                </ul>
+              </i>
+
+              <i className="fas fa-bell foobar">
+                <ul className="dropdown-menu">
+                  <li>Movie 1</li>
+                  <li>Movie 2</li>
+                  <li>Movie 3</li>
+                </ul>
+              </i>
+
+              <i className="fas fa-user-circle foobar">
+                <ul className="dropdown-menu">
+                  <li>profile 1</li>
+                  <li>profile 2</li>
+                  <li>profile 3</li>
+                  <li><Link className="link" to="/" onClick={logout}>Log Out!</Link></li>
+                </ul>
+              </i>
+
           </div>
         </div>
       );

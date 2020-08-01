@@ -1,14 +1,23 @@
 .navbar {
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: space-between;
   font-size: 20px;
   color: white;
-  height: 90px;
+  height: 70px;
   padding: 10px;
   margin: 0 auto;
   background: rgb(0, 0, 0);
   background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+}
+
+.left-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  float: left;
+  height: inherit;
+  padding: 5px;
 }
 
 .right-nav {
@@ -23,39 +32,65 @@
 
 
 .logo {
-  height: inherit;
-  width: 150px;
-  float: left;
+  width: 160px;
+  padding-right: 20px;
+  padding-top: 10px;
+  align-items: center;
+
 }
+
+.nav-button { 
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+  padding: 7px 17px;
+  font-size: 16px;
+  width: 100px;
+  height: 40px;
+  margin: 8px;
+  box-shadow: none;
+  border-color: transparent;
+  cursor: pointer;
+}
+
 
 
 .foobar {
   position: relative;
   font-size: 27px;
-  padding-right: 20px;
+  padding: 10px;
+  cursor: pointer;
 }
 
-.foobar > ul {
-  /* display: none; */
+.dropdown-menu {
+  display: none;
   list-style: none;
   position: absolute;
   top: 40px;
   right: 20px;
-  width: 600%;
+  width: 200%;
   background-color: #000000BF;
-  font-size: 20px;
+  font-size: 14px;
   border: 2px solid cornflowerblue;
+  text-align: center;
+  padding-top: 6px;
+  padding-bottom: 10px;
 }
 
 
-.foobar > ul > li {
-  padding: 5%;
-
-}
-
-.foobar:hover {
+.foobar:hover > ul, .dropdown-menu:hover > li {
   display: block;
   cursor: pointer;
+}
+
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
 }
 
 

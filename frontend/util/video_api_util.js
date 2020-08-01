@@ -9,25 +9,3 @@ export const fetchVideo = videoId => (
     url: `/api/videos/${videoId}`
   })
 );
-
-// export const updateVideo = videoId => {
-//   $.ajax({
-//     method: "PATCH",
-//     url: `/api/videos/${videoId}`
-//   })
-// };
-
-// export const createVideo = video => {
-//   $.ajax({
-//     method: 'POST',
-//     url: `/api/videos/${video.id}`,
-//     data: { video }
-//   })
-// };
-
-// export const deleteVideo = videoId => {
-//   $.ajax({
-//     method: "DELETE",
-//     url: `/api/videos/${videoId}`
-//   })
-// };
