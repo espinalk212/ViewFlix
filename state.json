@@ -69,7 +69,7 @@
       },
       5: { 
         id: 5, 
-        title: '', 
+        title: 'Jeffrey Espstein: Filthy Rich', 
         description: '', 
         genre: 'Non-Fiction', 
         rating: 0
@@ -82,6 +82,111 @@
           NYC subway station with his uncle, now he's experiencing all sorts of changes
           and watches Peter Parker die before his own eyes, what will he do now?', 
         genre: 'Family', 
+        rating: 0
+      },
+      7: { 
+        id: 7, 
+        title: 'The Last Dance', 
+        description: '', 
+        genre: 'Non-fiction', 
+        rating: 0
+      },
+      8: { 
+        id: 8, 
+        title: 'The Last Dance', 
+        description: '', 
+        genre: 'Non-fiction', 
+        rating: 0
+      },
+      9: { 
+        id: 9, 
+        title: 'FYRE', 
+        description: '', 
+        genre: 'Non-fiction', 
+        rating: 0
+      },
+      10: { 
+        id: 10, 
+        title: '6 Underground', 
+        description: '', 
+        genre: 'Action', 
+        rating: 0
+      },
+      11: { 
+        id: 11, 
+        title: 'Olympus Has Fallen', 
+        description: '', 
+        genre: 'Action', 
+        rating: 0
+      },
+      12: { 
+        id: 12, 
+        title: 'Bad Boys 2', 
+        description: '', 
+        genre: 'Action', 
+        rating: 0
+      },
+      13: { 
+        id: 13, 
+        title: 'Tall Girl', 
+        description: '', 
+        genre: 'Family', 
+        rating: 0
+      },
+      14: { 
+        id: 14, 
+        title: 'The Little Vampire', 
+        description: '', 
+        genre: 'Family', 
+        rating: 0
+      },
+      15: { 
+        id: 15, 
+        title: 'The Croods', 
+        description: '', 
+        genre: 'Non-fiction', 
+        rating: 0
+      },
+      16: { 
+        id: 16, 
+        title: 'The Wrong Missy', 
+        description: '', 
+        genre: 'Comedy', 
+        rating: 0
+      },
+      17: { 
+        id: 17, 
+        title: 'Bird Box', 
+        description: '', 
+        genre: 'Horror', 
+        rating: 0
+      },
+      18: { 
+        id: 18, 
+        title: 'Insidious', 
+        description: '', 
+        genre: 'Horror', 
+        rating: 0
+      },
+      19: { 
+        id: 19, 
+        title: 'Carrie', 
+        description: '', 
+        genre: 'Horror', 
+        rating: 0
+      },
+      20: { 
+        id: 20, 
+        title: 'Lost In Space', 
+        description: '', 
+        genre: 'Non-fiction', 
+        rating: 0
+      },
+      21: { 
+        id: 21, 
+        title: 'Battle: Los Angeles', 
+        description: '', 
+        genre: 'Fiction', 
         rating: 0
       },
     },

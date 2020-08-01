@@ -43,3 +43,124 @@ video4 = Video.create!(
         genre: 'Action', 
         rating: 5
 )
+
+video5 = Video.create!(
+        title: 'Jeffrey Espstein: Filthy Rich', 
+        description: '', 
+        genre: 'Non-Fiction', 
+        rating: 3
+
+)
+
+video6 = Video.create!(
+        title: 'Spider-man: Into the Spider-Verse', 
+        description: "Miles Morales was just a normal teenager from Brooklyn NY, when he found himself bitten by a radioactive spider while tagging up on NYC subway station with his uncle, now he's experiencing all sorts of changes and watches Peter Parker die before his own eyes, what will he do now?", 
+        genre: 'Family', 
+        rating: 5
+        
+)
+
+video7 = Video.create!(
+        title: 'The Last Dance', 
+        description: '', 
+        genre: 'Non-fiction', 
+        rating: 1
+)
+
+video8 = Video.create!(
+        title: 'Despicable Me', 
+        description: '', 
+        genre: 'Family', 
+        rating: 0
+)
+
+video9 = Video.create!(
+        title: 'FYRE', 
+        description: '', 
+        genre: 'Non-fiction', 
+        rating: 2
+)
+
+video10 = Video.create!(
+        title: '6 Underground', 
+        description: '', 
+        genre: 'Action', 
+        rating: 2
+)
+
+video11 = Video.create!(
+        title: 'Olympus Has Fallen', 
+        description: '', 
+        genre: 'Action', 
+        rating: 4
+)
+
+video12 = Video.create!(
+        title: 'Bad Boys 2', 
+        description: '', 
+        genre: 'Action', 
+        rating: 5
+)
+
+video13 = Video.create!(
+        title: 'Tall Girl', 
+        description: '', 
+        genre: 'Family', 
+        rating: 3
+)
+
+video14 = Video.create!(
+        title: 'The Little Vampire', 
+        description: '', 
+        genre: 'Family', 
+        rating: 3
+)
+
+video15 = Video.create!(
+        title: 'The Croods', 
+        description: '', 
+        genre: 'Non-fiction', 
+        rating: 3
+)
+
+video16 = Video.create!(
+        title: 'The Wrong Missy', 
+        description: '', 
+        genre: 'Comedy', 
+        rating: 5
+)
+
+video17 = Video.create!(
+        title: 'Bird Box', 
+        description: '', 
+        genre: 'Horror', 
+        rating: 4
+)
+
+video18 = Video.create!(
+        title: 'Insidious', 
+        description: '', 
+        genre: 'Horror', 
+        rating: 3
+)
+
+video19 = Video.create!(
+        title: 'Carrie', 
+        description: '', 
+        genre: 'Horror', 
+        rating: 4
+)
+
+video20 = Video.create!(
+        title: 'Lost In Space', 
+        description: '', 
+        genre: 'Non-fiction', 
+        rating: 3
+)
+
+video21 = Video.create!(
+        title: 'Battle: Los Angeles', 
+        description: '', 
+        genre: 'Fiction', 
+        rating: 3
+)

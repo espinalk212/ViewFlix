@@ -1,9 +1,22 @@
 .genre-container {
-  display: block;
+  display: flex;
   padding: 20px;
 }
 
 .title {
   color: white;
-  
+  padding: 10px;
+}
+
+.video {
+  display: flex;
+  flex-direction: row; 
+  color: white;
+  font-size: 20px;
+  list-style-type: none;
+}
+
+.main-video {
+  color: white;
+  padding: 30px;
 }

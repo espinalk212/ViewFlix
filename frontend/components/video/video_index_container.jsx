@@ -5,15 +5,16 @@ import VideoIndex from '../video/video_index';
 import { allVideos, genreVideos } from "../../reducers/selectors"
 
 const msp = state => ({
-  // videos: allVideos(state),
-  // actionVideos: genreVideos(state, "Action"),
-  // comedyVideos: genreVideos(state, "Comedy"),
-  // horrorVideos: genreVideos(state, "Horror"),
-  // fictionVideos: genreVideos(state, "Fiction"),
-  // nonfictionVideos: genreVideos(state, "Non-Fiction"),
-  // familyVideos: genreVideos(state, "Family"),
+  videos: allVideos(state.entities),
+  actionVideos: genreVideos(state.entities, "Action"),
+  comedyVideos: genreVideos(state.entities, "Comedy"),
+  horrorVideos: genreVideos(state.entities, "Horror"),
+  fictionVideos: genreVideos(state.entities, "Fiction"),
+  nonfictionVideos: genreVideos(state.entities, "Non-Fiction"),
+  familyVideos: genreVideos(state.entities, "Family"),
 
 });
+
 
 const mdp = dispatch => ({
   fetchVideo: video => dispatch(fetchVideo(video)),
