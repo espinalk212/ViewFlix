@@ -15,7 +15,7 @@ class VideoIndex extends React.Component {
   showVideos(videoGenre) {
    return videoGenre.map(video => {
       return( 
-        <li className='video' key={video.id} >{video.description}</li>
+        <video src={video.videoUrl} className='video' key={video.id} />
       )
     })
   }
@@ -27,7 +27,7 @@ class VideoIndex extends React.Component {
       <div>
         <div>
           <div className="main-video">
-            HERE IS THE MAIN VIDEO COMPONENT
+            {this.showVideos(this.props.actionVideos)}
           </div>
 
             <h1 className='title'>Comedy</h1>

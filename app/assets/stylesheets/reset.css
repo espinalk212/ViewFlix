@@ -17,4 +17,5 @@ time, mark, audio, video {
 	font-size: 100%;
 	font-family: 'Roboto Slab', serif;
 	vertical-align: baseline;
+	list-style: none;
 }

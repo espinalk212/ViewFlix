@@ -60,6 +60,7 @@
   font-size: 27px;
   padding: 10px;
   cursor: pointer;
+
 }
 
 .dropdown-menu {
@@ -75,12 +76,16 @@
   text-align: center;
   padding-top: 6px;
   padding-bottom: 10px;
+  border-left:6px solid transparent;
+  border-right:6px solid transparent;
+  border-top:6px solid #fff;
 }
 
 
 .foobar:hover > ul, .dropdown-menu:hover > li {
   display: block;
   cursor: pointer;
+  
 }
 
 
@@ -90,6 +95,7 @@
 }
 
 .link:hover {
+  color:white;
   text-decoration: underline;
 }
 

@@ -16,7 +16,7 @@ class Footer extends React.Component {
       <div className="footer">
         <div>
           <div>
-            <h1>Check this out</h1>
+            <li>I am an LI inside the footer!</li>
           </div>
         </div>
       </div>

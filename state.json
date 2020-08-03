@@ -93,9 +93,9 @@
       },
       8: { 
         id: 8, 
-        title: 'The Last Dance', 
+        title: 'Rim Of The World', 
         description: '', 
-        genre: 'Non-fiction', 
+        genre: 'Family', 
         rating: 0
       },
       9: { 
@@ -177,9 +177,9 @@
       },
       20: { 
         id: 20, 
-        title: 'Lost In Space', 
+        title: 'Always Be My Maybe', 
         description: '', 
-        genre: 'Non-fiction', 
+        genre: 'Comedy', 
         rating: 0
       },
       21: { 

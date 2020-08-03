@@ -5,3 +5,7 @@
   width: 100%;
   height: 19%;
 }
+
+.footer > li {
+  text-align: center;
+}
