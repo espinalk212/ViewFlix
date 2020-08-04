@@ -90,6 +90,8 @@ video10 = Video.create!(
 )
 file = open('https://viewflix-seeds.s3.amazonaws.com/6+Underground+starring+Ryan+Reynolds+%7C+Official+Trailer+%7C+Netflix.mp4')
 video10.video.attach(io: file, filename: '6+Underground+starring+Ryan+Reynolds+%7C+Official+Trailer+%7C+Netflix.mp4')
+file = open('https://viewflix-seeds.s3.amazonaws.com/6underground.jpg')
+video10.poster.attach(io: file, filename: '6underground.jpg')
 
 # video11 = Video.create!(
 #         title: 'Olympus Has Fallen', 

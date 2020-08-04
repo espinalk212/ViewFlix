@@ -32,6 +32,7 @@ class LoginForm extends React.Component {
 
   render() {
     return(
+      <div className='auth'>
       <div className="session-form-container" >
         <form className='session-form' onSubmit={this.handleSubmit}>
         <h1 className='form-heading'>Sign In</h1>
@@ -63,6 +64,7 @@ class LoginForm extends React.Component {
             <p>Don't have an account? <Link className='link' to='/signup'>Sign Up!</Link></p>
           </div>
         </form>
+      </div>
       </div>
     );
   }

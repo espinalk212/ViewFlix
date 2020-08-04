@@ -8,7 +8,6 @@ class NavbarGreeting extends React.Component {
 
 
 
-
   
   render() {
     const { currentUser, logout } = this.props;
@@ -63,16 +62,16 @@ class NavbarGreeting extends React.Component {
       );
     } else {
       return(
-        <div>
-          <div className='navbar'>
-            <Link to="/"><img className='logo' src={window.logo} /></Link>
-            <div className="right-nav">
-              {this.props.renderButton ? 
-              <Link to='/login'><button className='nav-button'>Sign In</button></Link> : null
-            }
+          <div>
+            <div className='navbar-splash'>
+              <Link to="/"><img className='logo' src={window.logo} /></Link>
+              <div className="right-nav">
+                {this.props.renderButton ? 
+                <Link to='/login'><button className='nav-button'>Sign In</button></Link> : null
+              }
+              </div>
             </div>
           </div>
-        </div>
           );
      }      
   }

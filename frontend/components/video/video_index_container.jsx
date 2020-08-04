@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchVideo, fetchVideos } from '../../actions/video_actions';
-import VideoIndex from '../video/video_index';
+import VideoIndex from './video_index';
 import { allVideos, genreVideos } from "../../reducers/selectors"
 
 const msp = state => ({
@@ -17,7 +17,7 @@ const msp = state => ({
 
 
 const mdp = dispatch => ({
-  fetchVideo: video => dispatch(fetchVideo(video)),
+  fetchVideo: videoId => dispatch(fetchVideo(videoId)),
   fetchVideos: () => dispatch(fetchVideos())
 });
 

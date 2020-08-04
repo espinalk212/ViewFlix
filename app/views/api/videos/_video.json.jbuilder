@@ -1,1 +1,0 @@
-json.extract! video, :id, :title, :description, :genre, :rating, :video

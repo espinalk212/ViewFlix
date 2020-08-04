@@ -6,11 +6,12 @@ import NavbarContainer from './navbar/navbar_container';
 import Splash from '../components/splash/splash';
 import LoginFormContainer from '../components/loginForm/login_form_container';
 import SignupFormContainer from '../components/signupForm/signup_form_container';
-import VideoIndexContainer from '../components/video/video_index_container';
+import VideoIndexContainer from './video/video_index_container';
+import VideoShowContainer from './video/video_show_container';
 import FooterContainer from '../components/footer/footer_container';
 
 const App = () => (
-  <div className='app' >
+  <div >
     <header >
       <NavbarContainer />
       {/* <Modal /> */}
@@ -20,11 +21,11 @@ const App = () => (
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <ProtectedRoute path="/home" component={VideoIndexContainer} />
+        <ProtectedRoute path="/videos/:videoId" component={VideoShowContainer} />
     {/* <ProtectedRoute exact path='/search' component={} />
-        <ProtectedRoute exact path='/videos/${videos.id}' component={} />
         <ProtectedRoute exact path='/playlists/${playlists.id}/edit' component={} /> */}
       </Switch >
-    <FooterContainer />
+    {/* <FooterContainer /> */}
   </div >
 );
 

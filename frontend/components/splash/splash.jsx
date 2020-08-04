@@ -8,6 +8,7 @@ class Splash extends React.Component {
 
   render() {
     return(
+      <div className='auth'>
         <div className='splash-signup-container'>
           <div className='splash-signup'>
             <h1>Unlimited Movies!</h1>
@@ -15,6 +16,7 @@ class Splash extends React.Component {
             <Link to='/signup'><button className='splash-signup-button'>Get Started</button></Link>
           </div>
         </div>
+      </div>
     );
   }
 }

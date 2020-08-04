@@ -1,5 +1,5 @@
 .navbar {
-  display: block;
+  position: fixed;
   align-items: center;
   justify-content: space-between;
   font-size: 20px;
@@ -9,6 +9,9 @@
   margin: 0 auto;
   background: rgb(0, 0, 0);
   background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  z-index: 9000;
+  width: 100%;
+  
 }
 
 .left-nav {
@@ -76,9 +79,6 @@
   text-align: center;
   padding-top: 6px;
   padding-bottom: 10px;
-  border-left:6px solid transparent;
-  border-right:6px solid transparent;
-  border-top:6px solid #fff;
 }
 
 
