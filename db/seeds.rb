@@ -38,12 +38,16 @@ demoUser = User.create!(
 #         rating: 3
 # )
 
-# # video4 = Video.create!(
-# #         title: 'Extraction', 
-# #         description: 'Offered a job to save the son of a wealthy drug lord, kidnapped behind enenmy lines, one man takes on a challenge. When all original plans go awry what does he do? Should he just give up, leave the kid or risk his life trying to get him to safety?', 
-# #         genre: 'Action', 
-# #         rating: 5
-# # )
+video4 = Video.create!(
+        title: 'Extraction', 
+        description: 'Offered a job to save the son of a wealthy drug lord, kidnapped behind enenmy lines, one man takes on a challenge. When all original plans go awry what does he do? Should he just give up, leave the kid or risk his life trying to get him to safety?', 
+        genre: 'Action', 
+        rating: 5
+)
+file = open('https://viewflix-seeds.s3.amazonaws.com/Extraction.mp4')
+video4.video.attach(io: file, filename: 'extraction.mp4')
+file = open('https://viewflix-seeds.s3.amazonaws.com/extraction1.png')
+video4.poster.attach(io: file, filename: 'extraction.png')
 
 # video5 = Video.create!(
 #         title: 'Jeffrey Espstein: Filthy Rich', 
@@ -88,10 +92,10 @@ video10 = Video.create!(
         genre: 'Action', 
         rating: 2
 )
-file = open('https://viewflix-seeds.s3.amazonaws.com/6+Underground+starring+Ryan+Reynolds+%7C+Official+Trailer+%7C+Netflix.mp4')
-video10.video.attach(io: file, filename: '6+Underground+starring+Ryan+Reynolds+%7C+Official+Trailer+%7C+Netflix.mp4')
-file = open('https://viewflix-seeds.s3.amazonaws.com/6underground.jpg')
-video10.poster.attach(io: file, filename: '6underground.jpg')
+file = open('https://viewflix-seeds.s3.amazonaws.com/6underground.mp4')
+video10.video.attach(io: file, filename: '6underground.mp4')
+file = open('https://viewflix-seeds.s3.amazonaws.com/6underground1.png')
+video10.poster.attach(io: file, filename: '6underground.png')
 
 # video11 = Video.create!(
 #         title: 'Olympus Has Fallen', 
@@ -100,12 +104,17 @@ video10.poster.attach(io: file, filename: '6underground.jpg')
 #         rating: 4
 # )
 
-# video12 = Video.create!(
-#         title: 'Bad Boys 2', 
-#         description: 'Mike Lowry and ', 
-#         genre: 'Action', 
-#         rating: 5
-# )
+video12 = Video.create!(
+        title: 'Bad Boys 2', 
+        description: 'Mike Lowry and ', 
+        genre: 'Action', 
+        rating: 5
+)
+file = open('https://viewflix-seeds.s3.amazonaws.com/Bad+Boys+II.mp4')
+video12.video.attach(io: file, filename: 'BadBoys2.mp4')
+file = open('https://viewflix-seeds.s3.amazonaws.com/badboys21.png')
+video12.poster.attach(io: file, filename: 'BadBoys2.png')
+
 
 # video13 = Video.create!(
 #         title: 'Tall Girl', 
@@ -128,12 +137,17 @@ video10.poster.attach(io: file, filename: '6underground.jpg')
 #         rating: 3
 # )
 
-# video16 = Video.create!(
-#         title: 'The Wrong Missy', 
-#         description: 'wrong ', 
-#         genre: 'Comedy', 
-#         rating: 5
-# )
+video16 = Video.create!(
+        title: 'The Wrong Missy', 
+        description: 'wrong ', 
+        genre: 'Comedy', 
+        rating: 5
+)
+file = open('https://viewflix-seeds.s3.amazonaws.com/The+Wrong+Missy.mp4')
+video16.video.attach(io: file, filename: 'TheWrongMissy.mp4')
+file = open('https://viewflix-seeds.s3.amazonaws.com/thewrongmissy1.png')
+video16.poster.attach(io: file, filename: 'TheWrongMissy.png')
+
 
 # video17 = Video.create!(
 #         title: 'Bird Box', 

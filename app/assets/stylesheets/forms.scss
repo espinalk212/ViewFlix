@@ -58,6 +58,19 @@
   width: 94%;
   height: 23px;
   border-color: transparent;
+ 
+}
+
+.input-field-errors {
+  background-color: #454545;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  font-size: 16px;
+  width: 94%;
+  height: 23px;
+  border-color: transparent;
+  border-bottom: 1px solid orange;
 }
 
 .or {

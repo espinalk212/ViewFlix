@@ -1,60 +1,36 @@
 import React from "react";
-import { Player, BigPlayButton, ControlBar  } from 'video-react';
-import {Link } from 'react-router-dom';
 import VideoIndexItem from './video_index_item';
 
 class VideoIndex extends React.Component {
   constructor(props){
     super(props)
 
-    this.showPosters.bind(this);
     this.showMain.bind(this);
-    
   }
+
 
   componentDidMount(){
     this.props.fetchVideos()
   }
 
-  showPosters(videoGenre) {
-   return videoGenre.map(video => {
-     return(
-       <Link to={`/videos/${video.id}`} >
-        <div className="poster" >
-          <Player  src={video.videoUrl}  poster={video.posterUrl} key={video.id} >
-              {/* <BigPlayButton position='none' /> */}
-              <ControlBar disableCompletely={true} />
-            </Player>
-            <span className="hidden" >
-              <p>{video.title}</p>
-            </span>
-          </div>
-        </Link>
-      )
-    })
-  }
-
   showMain(videoGenre) {
-    return videoGenre.map(video => {
-      return(
-        <Player  ref={player => { this.player = player }} autoPlay >
-            <ControlBar disableCompletely={true} />
-            <BigPlayButton position='center' />
-            <source src={video.videoUrl} key={video.id} />
-          </Player>
+    const allVideos = videoGenre.map(video => {
+      return (
+        <video className="main-video" src={video.videoUrl} key={video.id} autoPlay controls/>
       )
-    })
+    });
+    return allVideos[0];
   }
-  
 
   render(){
-    // const videoItem = videos.map(video => (
-    //   <VideoIndexItem key={video.id} video={video} />
-    // ));
+    const videoItem = videoGenre => (
+      videoGenre.map(video => (
+      <li className="video-container"><VideoIndexItem key={video.id} video={video} /></li>
+    )));
 
     return(
       <div className="video-index">
-        <div >
+
           <div className='main-video-container'>
             <div className="main-video" >
               {this.showMain(this.props.actionVideos)}
@@ -62,48 +38,37 @@ class VideoIndex extends React.Component {
           </div>
 
             <h1 className='title'>Comedy</h1>
-            <div className="genre-container">
-              <ul className='video'>
-                {this.showPosters(this.props.comedyVideos)}
-              </ul>
-            </div>
+            <ul className="genre-container">
+                {videoItem(this.props.comedyVideos)}
+            </ul>
+
 
             <h1 className='title'>Action</h1>
-            <div className="genre-container">
-              <ul className='video'>
-                {this.showPosters(this.props.actionVideos)}
-              </ul>
-            </div>
+            <ul className="genre-container">
+                {videoItem(this.props.actionVideos)}
+            </ul>
+
 
             <h1 className='title'>Non-fiction</h1>
-            <div className="genre-container">
-              <ul className='video'>
-              {this.showPosters(this.props.nonfictionVideos)}
-              </ul>
-            </div>
+            <ul className="genre-container">
+                {videoItem(this.props.nonfictionVideos)}
+            </ul>
 
             <h1 className='title'>Family</h1>
-            <div className="genre-container"    >
-              <ul className='video'>
-              {this.showPosters(this.props.familyVideos)}
-              </ul>
-            </div>
+            <ul className="genre-container"    >
+                {videoItem(this.props.familyVideos)}
+            </ul>
 
             <h1 className='title'>Horror</h1>
-            <div className="genre-container"   >
-              <ul className='video'>
-                {this.showPosters(this.props.horrorVideos)} 
-              </ul>
-            </div>
+            <ul className="genre-container"   >
+              {videoItem(this.props.horrorVideos)}
+            </ul>
 
             <h1 className='title'>Fiction</h1>
-            <div className="genre-container"  >
-              <ul className='video'>
-                {this.showPosters(this.props.fictionVideos)}
-              </ul>
-            </div>
-          
-          </div>
+            <ul className="genre-container"  >
+              {videoItem(this.props.fictionVideos)}
+            </ul>
+
         </div>
     );
   }

@@ -23,7 +23,7 @@ const App = () => (
         <ProtectedRoute path="/home" component={VideoIndexContainer} />
         <ProtectedRoute path="/videos/:videoId" component={VideoShowContainer} />
     {/* <ProtectedRoute exact path='/search' component={} />
-        <ProtectedRoute exact path='/playlists/${playlists.id}/edit' component={} /> */}
+        <ProtectedRoute exact path='/playlists/:playlistId/edit' component={} /> */}
       </Switch >
     {/* <FooterContainer /> */}
   </div >

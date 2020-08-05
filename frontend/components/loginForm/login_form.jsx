@@ -37,7 +37,7 @@ class LoginForm extends React.Component {
         <form className='session-form' onSubmit={this.handleSubmit}>
         <h1 className='form-heading'>Sign In</h1>
           <div>
-            <input className="input-field" 
+            <input className={this.props.errors.length !== 0 ? "input-field-errors" : "input-field" } 
               type="text"
               value={this.state.username}
               onChange={this.update('username')}
@@ -47,7 +47,7 @@ class LoginForm extends React.Component {
           </div>
           <br/>
           <div>
-            <input className="input-field"
+            <input className={this.props.errors.length !== 0 ? "input-field-errors" : "input-field"} 
               type="password"
               value={this.state.password}
               onChange={this.update('password')}

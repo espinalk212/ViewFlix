@@ -1,5 +1,4 @@
 import React from 'react';
-import {Player, BigButton, ControlBar } from 'video-react';
 
 class VideoShow extends React.Component {
   constructor(props) {
@@ -16,8 +15,9 @@ class VideoShow extends React.Component {
     }
 
     return(
-      <Player ref={(player) => { this.player = player }} src={this.props.video.videoUrl} poster={this.props.video.posterUrl} autoPlay fluid={false} >
-      </Player>
+      <div className="main-video">
+        <video src={this.props.video.videoUrl} poster={this.props.video.posterUrl} width="100%" height="100%" autoPlay controls />
+      </div>
     )
   }
 }

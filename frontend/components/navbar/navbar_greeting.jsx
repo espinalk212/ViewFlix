@@ -4,14 +4,26 @@ import { Link, Route, withRouter } from 'react-router-dom';
 class NavbarGreeting extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      hovered: false,
     }
+
+    this.handleHover = this.handleHover.bind(this);
+  }
+
+  handleHover() {
+    this.setState(prevState => ({
+      hovered: !prevState.hovered
+    }));
+  }
+
 
 
 
   
   render() {
     const { currentUser, logout } = this.props;
-    if (currentUser) {
+    if (currentUser && !this.props.videoShow) {
       return(
         <div className='navbar'>
           
@@ -60,6 +72,12 @@ class NavbarGreeting extends React.Component {
           </div>
         </div>
       );
+    } else if (currentUser && this.props.videoShow) {
+      return(
+        <div className={ this.state.hovered ? "video-nav" : "video-nav-hidden"} onMouseOver={this.handleHover} onMouseLeave={this.handleHover}  >
+          <Link to="/home"><button className='nav-button'>Home</button></Link>
+        </div>
+      )
     } else {
       return(
           <div>

@@ -7,7 +7,7 @@ import {
 
 const errorMssgs = {
   "Username can't be blank": 'username',
-  "Email can't be blank": 'email',
+  "Email is invalid": 'email',
   "Password is too short (minimum is 6 characters)": 'password' 
 };
 

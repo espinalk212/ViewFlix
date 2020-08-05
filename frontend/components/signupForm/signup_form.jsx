@@ -1,5 +1,4 @@
 import React from 'react';
-import { validateEmail } from '../../util/validate_util';
 import { Link } from 'react-router-dom';
 
 class SignupForm extends React.Component {
@@ -22,11 +21,7 @@ class SignupForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    if (validateEmail(this.state.email)) { 
-      return this.props.processForm(user) 
-    } else {
-      this.setState({ errors: ["Invalid Email"] });
-    }
+    this.props.processForm(user); 
   }
 
   handleDemoSubmit(e) {
@@ -46,7 +41,7 @@ class SignupForm extends React.Component {
           <form className='session-form' onSubmit={this.handleSubmit}>
             <h1 className="form-heading">Sign Up!</h1>
             <div>
-              <input className='input-field'
+              <input className={this.props.errors.length !== 0 ? "input-field-errors" : "input-field"} 
                 type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
@@ -56,7 +51,7 @@ class SignupForm extends React.Component {
             </div>
             <br/>
             <div>
-              <input className='input-field'
+              <input className={this.props.errors.length !== 0 ? "input-field-errors" : "input-field"} 
                 type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
@@ -66,13 +61,13 @@ class SignupForm extends React.Component {
             </div>
             <br/>
             <div>
-              <input className='input-field'
+              <input className={this.props.errors.length !== 0 ? "input-field-errors" : "input-field"} 
                 type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
                 placeholder={'Email'}
               />
-              <div className="error-text">{this.state.errors ? this.state.errors[0] : ''}</div>
+              <div className="error-text">{this.props.errors['email'] ? this.props.errors['email'] : ''}</div>
             </div>
             <div className="form-buttons">
               <input className='submit-button' type="submit" value={this.props.formType} />

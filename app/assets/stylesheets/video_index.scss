@@ -1,70 +1,85 @@
+.video-index {
+  background-color: #333;
+}
+
+
+
 .genre-container {
   display: flex;
-  padding: 20px;
-}
+  flex-direction: row;
+  padding: 5px;
+  height: 240px;
+}  
 
 .title {
   color: white;
   padding: 10px;
+  font-size: 14px;
+} 
+
+.video-title {
+  text-align: center;
+}
+
+.video-container {
+  border-radius: 3px;
+  padding: 2.5px;
+  height: 240px;
+  width: 320px;
+
+}
+
+.hidden {
+  border-radius: 3px;
+  display: none;
+  color: white;
+  height: 100px;
+}
+
+
+.video-container:hover .hidden {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: lightgray;
 }
 
 .video {
-  display: flex;
-  flex-direction: row; 
-  color: white;
-  font-size: 20px;
-  list-style-type: none;
-  width: 217px;
-  height: 122px;
-  cursor:pointer;
-  
+  object-fit: cover;
+  border-radius: 3px;
 }
 
-
 .main-video {
-  /* position: relative; 
-  padding-bottom: 43%;    
-  height: 0; 
-  overflow: hidden; 
-  max-width: 100%; */
   position: absolute; 
   top: -1px; 
   left: -1px;
   width: calc(100% + 2px); 
   height: calc(100% + 2px);
- 
+} 
+
+.rating-good {
+  text-align: center;
+  font-size: 10px;
+  color: green;
+}
+
+.rating-bad {
+  text-align: center;
+  font-size: 10px;
+  color: red;
 }
 
 .main-video-container {
   position: relative; 
-  padding-bottom: 56.25%;       
-  height: 0; 
+  padding-bottom: 56.25%;   
   overflow: hidden; 
-  max-width: 100%;
 }
 
-.video-index {
-  background-color: #333;
+video::-webkit-media-controls {
+        opacity: 0
 }
-
-.poster > Player {
-  height: 100%;
-  width: 100%;
-  margin: 10px;
-  padding: 10px;
-}
-
-.hidden {
-  display: none;
-}
-
-.poster:hover > .hidden{
-  display: block;
-  width: 100%;
-  height: 100%;
-  font-size: 12px;
-  border: solid 1px black;
-  cursor: pointer;
+video::-webkit-media-controls:hover {
+        opacity: 1
 }
 
 
