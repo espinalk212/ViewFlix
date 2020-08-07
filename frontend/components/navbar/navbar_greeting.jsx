@@ -27,6 +27,13 @@ class NavbarGreeting extends React.Component {
     }));
   }
 
+  // handleRemoveClick() {
+  //   event.stopPropagation();
+  //   this.setState(prevState => ({
+  //     clicked: !prevState.clicked
+  //   }));
+  // }
+
 
 
 
@@ -64,7 +71,7 @@ class NavbarGreeting extends React.Component {
                   <div className="pop-movies">POPULAR MOVIES</div>
                   <Link className="link" to="videos/4"><li>Extraction</li></Link>
                   <Link className="link" to="videos/6"><li>Spiderman</li></Link>
-                  <Link className="link" to="videos/16"><li>The Wrong Missy</li></Link>
+                  <Link className="link" to="videos/15"><li>The Wrong Missy</li></Link>
                 </ul>
               </i>
 
