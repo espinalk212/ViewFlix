@@ -8,13 +8,13 @@ import LoginFormContainer from '../components/loginForm/login_form_container';
 import SignupFormContainer from '../components/signupForm/signup_form_container';
 import VideoIndexContainer from './video/video_index_container';
 import VideoShowContainer from './video/video_show_container';
+import SearchIndexContainer from './search/search_index_container';
 import FooterContainer from '../components/footer/footer_container';
 
 const App = () => (
   <div >
     <header >
       <NavbarContainer />
-      {/* <Modal /> */}
     </header >
       <Switch >
         <AuthRoute exact path="/" component={Splash} />
@@ -22,8 +22,8 @@ const App = () => (
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <ProtectedRoute path="/home" component={VideoIndexContainer} />
         <ProtectedRoute path="/videos/:videoId" component={VideoShowContainer} />
-    {/* <ProtectedRoute exact path='/search' component={} />
-        <ProtectedRoute exact path='/playlists/:playlistId/edit' component={} /> */}
+        <ProtectedRoute path='/search' component={SearchIndexContainer} />
+        {/* <ProtectedRoute exact path='/playlists/:playlistId/edit' component={} /> */} */}
       </Switch >
     {/* <FooterContainer /> */}
   </div >

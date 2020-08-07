@@ -21,6 +21,7 @@ class LoginForm extends React.Component {
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
   }
+  
   handleDemoSubmit(e) {
     e.preventDefault();
     this.props.demoUser()

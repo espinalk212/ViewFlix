@@ -1,19 +1,29 @@
 import React from 'react';
 import { Link, Route, withRouter } from 'react-router-dom';
+import SearchContainer from '../search/search_container'
 
 class NavbarGreeting extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       hovered: false,
+      clicked: false
     }
 
     this.handleHover = this.handleHover.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleHover() {
     this.setState(prevState => ({
       hovered: !prevState.hovered
+    }));
+  }
+
+  handleClick() {
+    event.stopPropagation();
+    this.setState(prevState => ({
+      clicked: !prevState.clicked
     }));
   }
 
@@ -37,12 +47,9 @@ class NavbarGreeting extends React.Component {
             </i>
           </div>
 
-            <div className='right-nav'>
-              <i className="fas fa-search foobar" >
-                <ul className="">
-
-              {/* insert search box here */}
-                </ul>
+          <div className='right-nav' > 
+            <i className="fas fa-search foobar-search" onClick={this.handleClick} >
+              <div className={this.state.clicked ? "search-box-open" : "search-box-closed"}><Link to="/search"><SearchContainer /></Link></div>
               </i>
 
               <i className="fab fa-github foobar">
@@ -54,9 +61,10 @@ class NavbarGreeting extends React.Component {
 
               <i className="fas fa-bell foobar">
                 <ul className="dropdown-menu">
-                  <li>Movie 1</li>
-                  <li>Movie 2</li>
-                  <li>Movie 3</li>
+                  <div className="pop-movies">POPULAR MOVIES</div>
+                  <Link className="link" to="videos/4"><li>Extraction</li></Link>
+                  <Link className="link" to="videos/6"><li>Spiderman</li></Link>
+                  <Link className="link" to="videos/16"><li>The Wrong Missy</li></Link>
                 </ul>
               </i>
 
@@ -72,7 +80,7 @@ class NavbarGreeting extends React.Component {
           </div>
         </div>
       );
-    } else if (currentUser && this.props.videoShow) {
+      } else if (currentUser && this.props.videoShow) {
       return(
         <div className={ this.state.hovered ? "video-nav" : "video-nav-hidden"} onMouseOver={this.handleHover} onMouseLeave={this.handleHover}  >
           <Link to="/home"><button className='nav-button'>Home</button></Link>

@@ -1,10 +1,6 @@
-.video-index {
-  background-color: #333;
-}
-
-
 
 .genre-container {
+  position: relative;
   display: flex;
   flex-direction: row;
   padding: 5px;
@@ -13,42 +9,53 @@
 
 .title {
   color: white;
-  padding: 10px;
   font-size: 14px;
+  padding: 10px;
 } 
 
 .video-title {
+  padding-top: 5px;
+  padding-bottom: 5px;
   text-align: center;
+  justify-content: flex-start;
+
 }
 
 .video-container {
+  position: relative;
   border-radius: 3px;
   padding: 2.5px;
   height: 240px;
   width: 320px;
+  overflow: hidden;
 
 }
 
 .hidden {
-  border-radius: 3px;
   display: none;
   color: white;
-  height: 100px;
+
+}
+
+.hidden p {
+  margin: 0;
 }
 
 
-.video-container:hover .hidden {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: lightgray;
-}
 
 .video {
   object-fit: cover;
   border-radius: 3px;
 }
 
+.video-container:hover .hidden {
+  position: absolute;
+  display: block;
+  z-index: 3000;
+  background-color: #333;
+  width: 320px;
+  height: 60px;
+}
 .main-video {
   position: absolute; 
   top: -1px; 
@@ -62,11 +69,22 @@
   font-size: 10px;
   color: green;
 }
-
 .rating-bad {
   text-align: center;
   font-size: 10px;
   color: red;
+}
+
+.rating-good-show {
+  color: green;
+}
+
+.rating-bad-show {
+  color: red;
+}
+
+.genre {
+  color: white;
 }
 
 .main-video-container {
@@ -80,6 +98,12 @@ video::-webkit-media-controls {
 }
 video::-webkit-media-controls:hover {
         opacity: 1
+}
+
+.pop-movies {
+  border-bottom-style: solid;
+  border-bottom-color: red;
+
 }
 
 

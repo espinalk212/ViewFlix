@@ -1,6 +1,12 @@
 class Api::VideosController < ApplicationController
   def index
-    @videos = Video.all
+    if params[:query]
+      title = Video.where('title ILIKE ?', "%#{params[:query]}%")
+      genre = Video.where('genre ILIKE ?', "%#{params[:query]}%")
+      @videos = (title + genre).uniq
+    else
+      @videos = Video.all
+    end
     render :index
   end
 
@@ -10,8 +16,8 @@ class Api::VideosController < ApplicationController
     render :show
   end
 
-  # private 
-  # def video_params 
-  #   params.require(:video).permit(:id)
-  # end
+  private 
+  def video_params 
+    params.require(:video).permit(:id, :title, :description, :genre, :rating, :videoUrl, :posterUrl)
+  end
 end
