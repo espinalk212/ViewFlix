@@ -91,7 +91,7 @@ video6.poster.attach(io: file, filename: 'spiderman.png')
 video7 = Video.create!(
         title: 'The Last Dance', 
         description: 'Follow Michael Jordan and the 1998 Chicago Bulls as they win their last championship. Learn the kind of attitude it takes to win 6 championships in 8 years', 
-        genre: 'Non-fiction', 
+        genre: 'Non-Fiction', 
         rating: 1
 )
 file = open('https://viewflix-seeds.s3.amazonaws.com/The+Last+Dance+%7C+Relive+the+Phenomenon+%7C+Netflix.mp4')
@@ -103,7 +103,7 @@ video7.poster.attach(io: file, filename: 'thelastdance.png')
 video8 = Video.create!(
         title: 'FYRE', 
         description: 'It was supposed to be the festival of the century with a ton of celebrities backing it up, see where it all went wrong', 
-        genre: 'Non-fiction', 
+        genre: 'Non-Fiction', 
         rating: 2
 )
 file = open('https://viewflix-seeds.s3.amazonaws.com/FYRE%3A+The+Greatest+Party+That+Never+Happened+%7C+Official+Trailer+%5BHD%5D+%7C+Netflix.mp4')
@@ -237,10 +237,10 @@ video19 = Video.create!(
         genre: 'Family', 
         rating: 3
 )
-file = open('https://viewflix-seeds.s3.amazonaws.com/Carrie.mp4')
-video19.video.attach(io: file, filename: 'carrie.mp4')
-file = open('https://viewflix-seeds.s3.amazonaws.com/carrie2.png')
-video19.poster.attach(io: file, filename: 'carrie.png')
+file = open('https://viewflix-seeds.s3.amazonaws.com/Rim+of+the+World.mp4')
+video19.video.attach(io: file, filename: 'rim.mp4')
+file = open('https://viewflix-seeds.s3.amazonaws.com/rim1.png')
+video19.poster.attach(io: file, filename: 'rim.png')
 
 video20 = Video.create!(
         title: 'Battle: Los Angeles', 
