@@ -16,7 +16,9 @@ class VideoShow extends React.Component {
 
     return(
       <div className="main-video">
-        <video src={this.props.video.videoUrl} poster={this.props.video.posterUrl} width="100%" height="100%" autoPlay controls />
+        <video src={this.props.video.videoUrl} 
+          poster={this.props.video.posterUrl} width="100%" height="100%" 
+          autoPlay controls />
       </div>
     )
   }
