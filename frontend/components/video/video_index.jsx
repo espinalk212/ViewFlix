@@ -18,7 +18,8 @@ class VideoIndex extends React.Component {
   showMain(videoGenre) {
     const allVideos = videoGenre.map(video => {
       return (
-        <video className="main-video" width="100%" src={video.videoUrl} key={video.id} autoPlay controls/>
+        <video className="main-video" width="100%" src={video.videoUrl} key={video.id} controls  onMouseOver={e => e.target.play()}
+          onMouseOut={e => e.target.pause()}/>
       )
     });
     return allVideos[0];
