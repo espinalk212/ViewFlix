@@ -17,12 +17,14 @@ export const receiveVideo = video => ({
 export const clearVideos = () => ({
   type: CLEAR_VIDEOS,
 
-})
+});
 
 export const fetchVideos = () => dispatch => (
   APIUTIL.fetchVideos()
   .then(videos => dispatch(receiveVideos(videos)))
 );
+
+
 export const fetchVideo = videoId => dispatch => (
   APIUTIL.fetchVideo(videoId)
   .then(video => dispatch(receiveVideo(video)))

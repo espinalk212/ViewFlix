@@ -46,11 +46,11 @@ class NavbarGreeting extends React.Component {
           
           <div className='left-nav'> 
             <Link to="/home"><img className='logo' src={window.logo} /></Link>
-            <i className="fas fa-clipboard-list foobar">
-              <ul className='dropdown-menu'>
+            <i className="fas fa-clipboard-list foobar"> 
+              {/* <ul className='dropdown-menu'>
                 <li>Playlist 1</li>
                 <li>Playlist 2</li>
-              </ul>
+              </ul> */}
             </i>
           </div>
 
@@ -79,9 +79,9 @@ class NavbarGreeting extends React.Component {
 
               <i className="fas fa-user-circle foobar">
                 <ul className="dropdown-menu">
-                  <li>profile 1</li>
+                  {/* <li>profile 1</li>    // uncomment out to add profiles as bonus features
                   <li>profile 2</li>
-                  <li>profile 3</li>
+                  <li>profile 3</li> */}
                   <li><Link className="link" to="/" onClick={logout}>Log Out!</Link></li>
                 </ul>
               </i>
