@@ -61,10 +61,10 @@ class NavbarGreeting extends React.Component {
 
               <i className="fab fa-github foobar">
                 <ul className="dropdown-menu">
-                  <a className="link" href="https://github.com/espinalk212"><li>Github</li></a>
-                  <a className="link" href="https://www.linkedin.com/in/kevinespinal212/"><li>LinkedIn</li></a>
-                  <a className="link" href="https://angel.co/u/kevin-espinal"><li>AngelList</li></a>
-                  <a className="link" href="https://espinalk212.github.io/"><li>Portfolio</li></a>
+                  <a className="link" href="https://github.com/espinalk212" target="_blank" ><li>Github</li></a>
+                  <a className="link" href="https://www.linkedin.com/in/kevinespinal212/" target="_blank" ><li>LinkedIn</li></a>
+                  <a className="link" href="https://angel.co/u/kevin-espinal" target="blank" ><li>AngelList</li></a>
+                  <a className="link" href="https://espinalk212.github.io/" target="blank" ><li>Portfolio</li></a>
                 </ul>
               </i>
 
