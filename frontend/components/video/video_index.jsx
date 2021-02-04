@@ -12,7 +12,8 @@ class VideoIndex extends React.Component {
 
 
   componentDidMount(){
-    this.props.fetchVideos()
+    this.props.fetchVideos();
+    this.props.fetchPlaylist();
   }
 
   showMain(videoGenre) {
@@ -28,7 +29,7 @@ class VideoIndex extends React.Component {
   render(){
     const videoItem = videoGenre => (
       videoGenre.map(video => (
-      <li className="video-container" key={video.id} ><VideoIndexItem video={video} /></li>
+      <li className="video-container" key={video.id} ><VideoIndexItem addVideo={this.props.addVideo} video={video} /></li>
     )));
 
     return(

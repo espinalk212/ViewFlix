@@ -8,9 +8,15 @@ class Api::PlaylistsController < ApplicationController
     @playlist = Playlist.find(params[:id])
     render :show
   end
+  
+  def update 
+
+  end
 
   def destroy 
+
   end
+
 
   private
   

@@ -8,6 +8,7 @@
 require 'open-uri'
 User.delete_all
 Video.delete_all
+Playlist.delete_all
 
 
 demoUser = User.create!(
@@ -15,6 +16,7 @@ demoUser = User.create!(
         password: "123456",
         email: 'DemoUser@demoemail.com'
 )
+
 
 video1 = Video.create!(
         title: 'Space Jam', 
@@ -252,6 +254,11 @@ file = open('https://viewflix-seeds.s3.amazonaws.com/BATTLE+LOS+ANGELES.mp4')
 video20.video.attach(io: file, filename: 'battlela.mp4')
 file = open('https://viewflix-seeds.s3.amazonaws.com/battlela2.png')
 video20.poster.attach(io: file, filename: 'battlela.png')
+
+playlist1 = Playlist.create!(
+        user_id: 1,
+        video_id: 1
+)
 
 
 # video21 = Video.create!(
