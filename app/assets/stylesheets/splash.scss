@@ -1,15 +1,12 @@
 .splash-signup-container {
   display: block;
   text-align: center;
-  padding-top: 20%;
-  padding-bottom: 30%;
 }
 
 .splash-signup {
   display: inline-flexbox;
   font-size: 55px;
   color: white;
-
 }
 
 .splash-signup-button {
@@ -27,6 +24,6 @@
 .navbar-splash {
   z-index: 1000;
   position: relative;
-  padding: 10px;
-  height: 70px;
+  height: 10vh;
+  padding-left: 1vw;
 }

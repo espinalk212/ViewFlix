@@ -9,10 +9,13 @@
   padding-top: 20px;
   margin: 0 auto;
   background: rgb(0, 0, 0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
   z-index: 9000;
   width: 100%;
-  
 }
 
 .navbar-search {
@@ -25,10 +28,13 @@
   padding: 10px;
   padding-top: 20px;
   margin: 0 auto;
-  background:rgb(0, 0, 0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
   width: 100%;
-  
 }
 
 .left-nav {
@@ -50,16 +56,14 @@
   padding-right: 15px;
 }
 
-
 .logo {
   width: 160px;
   padding-right: 20px;
   padding-top: 10px;
   align-items: center;
-
 }
 
-.nav-button { 
+.nav-button {
   background-color: red;
   border-radius: 5px;
   color: white;
@@ -73,37 +77,32 @@
   cursor: pointer;
 }
 
-
-
 .foobar {
   position: relative;
   font-size: 27px;
   padding: 10px;
   cursor: pointer;
-
 }
 
 .dropdown-menu {
   display: none;
   list-style: none;
   position: absolute;
-  top: 20px;
+  top: 7vh;
   right: 20px;
   width: 300%;
-  background-color: #000000BF;
+  background-color: #000000bf;
   font-size: 20px;
   border: 2px solid cornflowerblue;
   text-align: center;
   padding: 5px;
 }
 
-
-.foobar:hover > ul, .dropdown-menu:hover > li {
+.foobar:hover > ul,
+.dropdown-menu:hover > li {
   display: block;
   cursor: pointer;
-  
 }
-
 
 .link {
   color: white;
@@ -111,14 +110,13 @@
 }
 
 .link:hover {
-  color:white;
+  color: white;
   text-decoration: underline;
 }
 
 .link:visited {
   color: white;
 }
-
 
 .video-nav {
   display: block;
@@ -129,11 +127,14 @@
   padding: 10px;
   margin: 0 auto;
   background: rgb(0, 0, 0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
   z-index: 9000;
   width: 100%;
   cursor: pointer;
-
 }
 
 .video-nav-hidden {
@@ -145,7 +146,11 @@
   padding: 10px;
   margin: 0 auto;
   background: rgb(0, 0, 0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
   z-index: 9000;
   width: 100%;
   cursor: pointer;
@@ -157,11 +162,10 @@
   right: 40px;
   width: 500%;
   height: 27px;
-  background-color: #000000BF;
+  background-color: #000000bf;
   font-size: 16px;
   border: 2px solid cornflowerblue;
   text-align: center;
-
 }
 
 .foobar-search {

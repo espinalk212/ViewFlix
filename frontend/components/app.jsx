@@ -12,21 +12,21 @@ import SearchIndexContainer from './search/search_index_container';
 import FooterContainer from '../components/footer/footer_container';
 
 const App = () => (
-  <div >
-    <header >
+  <>
+    <header>
       <NavbarContainer />
-    </header >
-      <Switch >
-        <AuthRoute exact path="/" component={Splash} />
-        <AuthRoute exact path="/login" component={LoginFormContainer} />
-        <AuthRoute exact path="/signup" component={SignupFormContainer} />
-        <ProtectedRoute path="/home" component={VideoIndexContainer} />
-        <ProtectedRoute path="/videos/:videoId" component={VideoShowContainer} />
-        <ProtectedRoute path='/search' component={SearchIndexContainer} />
-        {/* <ProtectedRoute exact path='/playlists/:playlistId/edit' component={PlaylistContainer} /> */}
-      </Switch >
+    </header>
+    <Switch>
+      <AuthRoute exact path="/" component={Splash} />
+      <AuthRoute exact path="/login" component={LoginFormContainer} />
+      <AuthRoute exact path="/signup" component={SignupFormContainer} />
+      <ProtectedRoute path="/home" component={VideoIndexContainer} />
+      <ProtectedRoute path="/videos/:videoId" component={VideoShowContainer} />
+      <ProtectedRoute path="/search" component={SearchIndexContainer} />
+      {/* <ProtectedRoute exact path='/playlists/:playlistId/edit' component={PlaylistContainer} /> */}
+    </Switch>
     {/* <FooterContainer /> */}
-  </div >
+  </>
 );
 
 export default App;

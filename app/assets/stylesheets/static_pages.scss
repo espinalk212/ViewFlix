@@ -3,11 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .auth {
   position: relative;
-  min-height: 100vh;
-  top: -90px;
-  padding-top: 90px;
+  min-height: 90vh;
+  min-width: 100vw;
+  // padding-bottom: 10vh;
   background-image: image_url('viewflix.jpg'),
-  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-blend-mode: overlay;
   background-repeat: no-repeat;
 }
