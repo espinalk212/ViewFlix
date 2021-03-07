@@ -18,8 +18,7 @@ const msp = state => ({
 const mdp = dispatch => ({
   fetchVideo: videoId => dispatch(fetchVideo(videoId)),
   fetchVideos: () => dispatch(fetchVideos()),
-  fetchPlaylist: () => dispatch(fetchPlaylist()),
-  // addVideo: videoId => dispatch(addVideo(videoId)),
+  fetchPlaylist: playlistId => dispatch(fetchPlaylist(playlistId)),
 });
 
 export default connect(msp, mdp)(VideoIndex);

@@ -1,29 +1,29 @@
 class Api::PlaylistsController < ApplicationController
 
-  def create
-    @playlist = Playlist.new(playlist_params)
-  end
-
   def show
     @playlist = Playlist.find(params[:id])
     render :show
   end
-  
-  def update 
+
+  def create
+    @playlist = Playlist.new(playlist_params)
+  end
+
+  def update
 
   end
 
-  def destroy 
+  def destroy
 
   end
 
 
   private
-  
+
   def playlist_params
-    params.require(:playlist).permit(:video_id, :user_id, :order)
+    params.require(:playlist).permit(:videos, :user_id, :order)
   end
 
 
-  
+
 end

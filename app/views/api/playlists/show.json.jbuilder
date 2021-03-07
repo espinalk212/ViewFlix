@@ -1,1 +1,1 @@
-json.extract! @playlist :user_id, :video_id, :order
+json.extract! @playlist, :id, :user_id, :videos, :order
