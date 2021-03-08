@@ -1,8 +1,8 @@
 class User < ApplicationRecord
-  validates :username, :session_token, presence: true, uniqueness: true
+  validates :username, :session_token, presence: true, uniqueness: { case_sensitive: false }, length: { minimum: 3 }
   validates :password_digest, presence: true
   validates :password, length: {minimum: 6, allow_nil: true }
-  validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
+  validates :email, uniqueness: { case_sensitive: false }, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
 
   has_one :playlist
 

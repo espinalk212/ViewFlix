@@ -9,6 +9,7 @@ import SignupFormContainer from '../components/signupForm/signup_form_container'
 import VideoIndexContainer from './video/video_index_container';
 import VideoShowContainer from './video/video_show_container';
 import SearchIndexContainer from './search/search_index_container';
+import PlaylistContainer from '../components/playlist/playlist_container';
 import FooterContainer from '../components/footer/footer_container';
 
 const App = () => (
@@ -21,6 +22,10 @@ const App = () => (
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <ProtectedRoute path="/home" component={VideoIndexContainer} />
+      <ProtectedRoute
+        path="/playlist/:playlistId"
+        component={PlaylistContainer}
+      />
       <ProtectedRoute path="/videos/:videoId" component={VideoShowContainer} />
       <ProtectedRoute path="/search" component={SearchIndexContainer} />
       {/* <ProtectedRoute exact path='/playlists/:playlistId/edit' component={PlaylistContainer} /> */}

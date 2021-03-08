@@ -257,7 +257,7 @@ video20.poster.attach(io: file, filename: 'battlela.png')
 
 playlist1 = Playlist.create!(
         user_id: 1,
-        videos: [2, 4, 6,],
+        videos: [ 2, 5, 8],
         order: 1
 )
 
